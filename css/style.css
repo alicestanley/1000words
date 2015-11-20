@@ -1,0 +1,417 @@
+/*
+Project Name: 1000words
+Client: Steven Godfrey
+Author: Alice Stanley
+Developer @GA Melbourne
+*/
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+html {box-sizing: border-box;}
+*, *:before, *:after {box-sizing: inherit;}
+
+/* Clear fix hack */
+.group:after{
+    display: block;
+    content: " ";
+    clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+html{font-size:100%;}
+
+/*setting the body style*/
+body {
+    color: white;             /* light grey */
+    font-size: 0.75em;             /* 16px */
+    font-weight: 300;
+    line-height: 1.4;
+    background-color: black;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*additional styles just for links*/
+a {
+    color: white;
+    font-size: .75em;
+    text-decoration: none;
+}
+
+/* styles for images*/
+
+img {
+    max-width: 100%;
+    height: auto;
+
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* Center the container */
+.container {
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+.gallery{
+    margin: 2em
+}
+
+/*might need this*/
+.visually-hidden {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+}
+
+.hidden{display: none;}
+.main-content {margin: 2.5em auto 1.25em;}  /* 40px 20px */
+
+/*setting the header style at the top of every page*/
+header {
+    padding: 1.5em 0;            
+    overflow: hidden;
+    background: black;        /* grey #575658 */
+
+}
+
+.logo{
+        display: inline-block;
+}
+
+/*footer styling for everypage*/
+
+footer {
+    
+    background: #575658;       
+    padding: 1.5em 0;
+}
+
+footer ul {
+    margin: 1em 0;
+    display: inline-block;
+}   
+
+
+footer li {
+    margin: 0 .625em;          /* 10px */
+    display: inline-block;
+    list-style: none;
+}
+
+footer li a {
+    padding: .5em;}   /* 8px */
+
+footer p {
+    display: inline-block;
+    margin-top: 3em;
+    float: right;
+}
+
+/******************************************
+/* TYPOGRAPHY
+/*******************************************/
+
+h1{
+  font-family:'Pacifico', cursive;
+  color: #D4D3CD;   /*#FFE901*/
+  text-shadow: 4px 4px 3px rgba(0,0,0,0.1); 
+  text-shadow: 2px 2px black;
+  font-size: 3em;
+  font-weight: 300;
+
+}
+
+
+h2{
+    font-family: 'Pacifico', cursive;
+    color: #D4D3CD;
+    display: block;
+    margin: 1em 0em;
+    font-size: 1.5em;
+    text-align: right;
+}
+
+h3 a{
+    font-family: 'Open Sans', sans-serif;
+    color: #FFE901;
+    font-weight: 600;
+    display: inline-block;
+    margin: 1em;
+
+}
+
+.about p{
+    text-align: justify;
+}
+
+.main-nav a,
+ {
+    color: white;
+    }  
+
+.main-nav a {
+    font-size: .85em;             /*16px*/
+    font-weight: 200;
+}
+
+
+footer p {
+    color: white;
+    font-size: .55em;          /* 12px */
+    font-weight: 100;
+
+ }
+
+.about img{
+    margin: 0.5em;
+}
+
+/******************************************
+/* SLIDER
+/*******************************************/
+
+/*this is the arrow navigation*/
+.slides {
+    padding: 0;
+    width: 900px; /*need to make bigger*/
+    height: 700px; /*need to make bigger*/
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+/*what does this mean? Is this resetting something?*/
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input { 
+    display: none; 
+}
+
+.slide-container { 
+    display: block; 
+}
+
+/*this is the images*/
+.slide {
+    top: 0;
+    opacity: 0;
+    width: 900px;
+    height: 700px;
+    display: block;
+    position: absolute;
+
+    transform: scale(0);
+
+    transition: all .7s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav label {
+    width: 200px;
+    height: 100%;
+    display: none;
+    position: absolute;
+
+      opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+
+    transition: opacity .2s;
+
+    color: #FFF;
+    font-size: 156pt;
+    text-align: center;
+    line-height: 650px; /*height of the arrow*/
+    font-family: "Varela Round", sans-serif;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover + .nav label { 
+    opacity: 0.5; 
+}
+
+.nav label:hover { 
+    opacity: 1; 
+}
+
+.nav .next { right: 0; }
+
+input:checked + .slide-container  .slide {
+    opacity: 1;
+
+    transform: scale(1);
+
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label { display: block; }
+
+
+/*navigation dots*/
+.nav-dots {
+    width: 100%;
+    bottom: 9px;
+    height: 20px; /*height of the dots*/
+    display: block;
+    position: absolute;
+    text-align: center;
+}
+
+.nav-dots .nav-dot {
+    top: -5px;
+    width: 11px;
+    height: 11px;
+    margin: 0 4px;
+    position: relative;
+    border-radius: 100%;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*This ~ sign does work in older browsers. This is what makes the dots link I think.*/
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4,
+input#img-5:checked ~ .nav-dots label#img-dot-5,
+input#img-6:checked ~ .nav-dots label#img-dot-6 {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+
+/******************************************
+/* MODULES
+/*******************************************/
+
+
+.main-nav a {
+    padding: .75em .25em;}  /* 12px 4px */
+.mobile-nav{
+    float:right;
+}
+
+/* Phones -----------------------*/
+@media screen and (max-width:767px) {
+    .page header{padding-bottom:.5em;}
+
+    .main-nav{
+        overflow:hidden;
+        clear:both;
+        margin-top:1em;
+        height:0;
+        transition:height 1s;
+    }
+    .main-nav.open{
+        height:17.5em; /* 280px */
+    }
+
+    .main-nav a {
+        display:block;
+        background:rgba(255,255,255,0.1);
+        margin-top:.5em; /*8px*/
+        padding-left: 1em;
+    }
+
+    /* Mobile Nav*/
+    .mobile-nav{
+        display: block;
+        position:relative;
+        margin-top:.4em;
+        height:2em;
+        width:2.25em;
+        transform:rotate(0deg);
+    }
+    .mobile-nav span{
+        position:absolute;
+        background: white;
+        width:100%;
+        height:3px;
+        border-radius:30px;
+        transition:all 1s;
+        transform:rotate(0deg);
+    }
+    .mobile-nav span:nth-child(1){top:0px;}
+    .mobile-nav span:nth-child(2){top:.625em;}
+    .mobile-nav span:nth-child(3){top:1.25em;}
+    .mobile-nav.open span:nth-child(1){
+        transform:rotate(45deg);
+        top: .625em; /* 10px */
+        left: 0px;
+    }
+    .mobile-nav.open span:nth-child(2){opacity:0;}
+    .mobile-nav.open span:nth-child(3){
+        transform:rotate(-45deg);
+        top: .625em; /* 10px */
+        left: 0px;
+    }
+
+    /* STATE */
+    a:active,
+    .main-nav a:active{color: white;}
+    .main-nav a:active {background:rgba(255,255,255,0.2);}
+
+    .page h2 a:active,
+    .readlink:active,
+    .sidebar a:active{color: #121212;}    /* almost black */
+
+    .blue:active{color: #f9e42e;}         /* yellow */
+}
+
+/* Tablet/Desktop -----------------------*/
+@media screen and (min-width:768px) {
+
+    /* BASE */
+    html{font-size:1.5em;}
+
+    a:hover,
+    .main-nav a:hover,
+{
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+        -webkit-transition:     all .1s;
+        -o-transition:          all .1s;
+        transition:             all .1s;
+    }
+
+    
+    .main-nav {
+        float:right;
+        margin-top: 0.75em;
+    }
+    .main-nav a {
+        margin-left:1.25em;}      /* 30/24 (ie.1.5 x 16px) */
+
+    /* STATE */
+    a:hover,
+    .main-nav a:hover{color: white;}
+
+   
+}
