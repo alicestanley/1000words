@@ -59,10 +59,20 @@ img {
 .container {
     margin: 0 auto;
     max-width: 960px;
+    margin-bottom: 50px;
 }
 
-.gallery{
-    margin: 2em
+.about_image{
+    float: left;
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+
+.about_content{
+    text-align: justify;
+    display: inline-block;
+    width: 56%;
+
 }
 
 /*might need this*/
@@ -142,18 +152,24 @@ h2{
     text-align: right;
 }
 
+h3{
+    font-family: 'Pacifico', cursive;
+    color: #D4D3CD;
+    display: block;
+    margin: 1em 0em;
+    font-size: 1.5em;
+    text-align: left;
+}
+
 h3 a{
     font-family: 'Open Sans', sans-serif;
     color: #FFE901;
     font-weight: 600;
     display: inline-block;
     margin: 1em;
-
 }
 
-.about p{
-    text-align: justify;
-}
+
 
 .main-nav a,
  {
@@ -178,133 +194,21 @@ footer p {
 }
 
 /******************************************
+/* MAILCHIMP
+/*******************************************/
+
+
+
+/******************************************
 /* SLIDER
 /*******************************************/
 
-/*this is the arrow navigation*/
-.slides {
-    padding: 0;
-    width: 900px; /*need to make bigger*/
-    height: 700px; /*need to make bigger*/
-    display: block;
-    margin: 0 auto;
-    position: relative;
-}
+/*how do I set this in a frame and keep it there?*/
 
-/*what does this mean? Is this resetting something?*/
-.slides * {
-    user-select: none;
-    -ms-user-select: none;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;
-}
+.shootsgallery{
+    width:900px;
+    height:auto;
 
-.slides input { 
-    display: none; 
-}
-
-.slide-container { 
-    display: block; 
-}
-
-/*this is the images*/
-.slide {
-    top: 0;
-    opacity: 0;
-    width: 900px;
-    height: 700px;
-    display: block;
-    position: absolute;
-
-    transform: scale(0);
-
-    transition: all .7s ease-in-out;
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-}
-
-.nav label {
-    width: 200px;
-    height: 100%;
-    display: none;
-    position: absolute;
-
-      opacity: 0;
-    z-index: 9;
-    cursor: pointer;
-
-    transition: opacity .2s;
-
-    color: #FFF;
-    font-size: 156pt;
-    text-align: center;
-    line-height: 650px; /*height of the arrow*/
-    font-family: "Varela Round", sans-serif;
-    background-color: rgba(255, 255, 255, .3);
-    text-shadow: 0px 0px 15px rgb(119, 119, 119);
-}
-
-.slide:hover + .nav label { 
-    opacity: 0.5; 
-}
-
-.nav label:hover { 
-    opacity: 1; 
-}
-
-.nav .next { right: 0; }
-
-input:checked + .slide-container  .slide {
-    opacity: 1;
-
-    transform: scale(1);
-
-    transition: opacity 1s ease-in-out;
-}
-
-input:checked + .slide-container .nav label { display: block; }
-
-
-/*navigation dots*/
-.nav-dots {
-    width: 100%;
-    bottom: 9px;
-    height: 20px; /*height of the dots*/
-    display: block;
-    position: absolute;
-    text-align: center;
-}
-
-.nav-dots .nav-dot {
-    top: -5px;
-    width: 11px;
-    height: 11px;
-    margin: 0 4px;
-    position: relative;
-    border-radius: 100%;
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-.nav-dots .nav-dot:hover {
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/*This ~ sign does work in older browsers. This is what makes the dots link I think.*/
-
-input#img-1:checked ~ .nav-dots label#img-dot-1,
-input#img-2:checked ~ .nav-dots label#img-dot-2,
-input#img-3:checked ~ .nav-dots label#img-dot-3,
-input#img-4:checked ~ .nav-dots label#img-dot-4,
-input#img-5:checked ~ .nav-dots label#img-dot-5,
-input#img-6:checked ~ .nav-dots label#img-dot-6 {
-    background: rgba(0, 0, 0, 0.8);
 }
 
 
