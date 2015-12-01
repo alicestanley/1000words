@@ -1,24 +1,34 @@
-function newsletterSignUp(){
-    alert( "We're Not Ready For Sign-Ups...Yet." );
-}
 
-function toggleReadMore(event){
-    $(this).prev().slideToggle();
-    if( $(this).hasClass('readlink') ){
-        $(this).html() == 'Read Less &lt;' ? $(this).html('Read More &gt;') : $(this).html('Read Less &lt;');
-    }
-    else{
-        $(this).toggle();
-    }
-    event.preventDefault();
-}
 
 function toggleMobileNav(){
     $('nav, .mobile-nav').toggleClass('open');
 }
 
 $(document).ready(function(){
-    $('.newsletter-signup').on('click', '.button', newsletterSignUp);
-    $('.toggle').click(toggleReadMore);
     $('.mobile-nav').click(toggleMobileNav);
 });
+
+// initialise the slick script
+$(document).ready(function(){
+  $('.shootsgallery').slick({
+  	// setting-name: setting-value
+	// variableWidth: true  	
+
+});
+});
+
+// initialise the slick script for home page
+$(document).ready(function(){
+  $('.homegallery').slick({
+  	// setting-name: setting-value
+  	autoplay: true,
+  	autoplaySpeed: 2000,
+  	dots: true,
+  	infinite: true,
+  	speed: 500,
+  	fade: true,
+  	cssEase: 'linear'
+});
+});
+	
+

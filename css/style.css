@@ -14,12 +14,7 @@ Developer @GA Melbourne
 html {box-sizing: border-box;}
 *, *:before, *:after {box-sizing: inherit;}
 
-/* Clear fix hack */
-.group:after{
-    display: block;
-    content: " ";
-    clear: both;
-}
+
 
 /******************************************
 /* BASE STYLES
@@ -48,6 +43,7 @@ a {
 img {
     max-width: 100%;
     height: auto;
+    margin: auto;
 
 }
 
@@ -59,11 +55,26 @@ img {
 .container {
     margin: 0 auto;
     max-width: 960px;
+    margin-bottom: 50px;
 }
 
-.gallery{
-    margin: 2em
+.container:after {
+  content: "";
+  display: block;
+  clear: both;
 }
+
+.about_image{
+    float: left;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    display: inline-block;
+
+}
+
+
+
+ 
 
 /*might need this*/
 .visually-hidden {
@@ -90,11 +101,12 @@ header {
 }
 
 /*footer styling for everypage*/
-
+/*????????????????????????????????*/
+/*question should be a better way to stop iamge overlap?*/
 footer {
-    
     background: #575658;       
     padding: 1.5em 0;
+
 }
 
 footer ul {
@@ -137,9 +149,18 @@ h2{
     font-family: 'Pacifico', cursive;
     color: #D4D3CD;
     display: block;
-    margin: 1em 0em;
+    margin: 0;
     font-size: 1.5em;
     text-align: right;
+}
+
+h3{
+    font-family: 'Open Sans', sans-serif;
+    color: #D4D3CD;
+    display: block;
+    margin: 0;
+    font-size: 1.5em;
+    text-align: left;
 }
 
 h3 a{
@@ -148,11 +169,15 @@ h3 a{
     font-weight: 600;
     display: inline-block;
     margin: 1em;
-
 }
 
-.about p{
-    text-align: justify;
+p{
+    font-family: 'Open Sans', sans-serif;
+    color: #D4D3CD;
+    display: block;
+    margin: 0;
+    font-size: 1em;
+    text-align: left;   
 }
 
 .main-nav a,
@@ -173,139 +198,78 @@ footer p {
 
  }
 
-.about img{
-    margin: 0.5em;
+
+
+/******************************************
+/* MAILCHIMP
+/*******************************************/
+
+/*Register page*/
+.mc-field-group{
+  margin: 0 auto;
+  max-width: 960px;
+    padding:12px; 
+    position:relative;
 }
+
+label{
+    text-align: left;
+/*    margin-right: 15px;*/
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+
+}
+
+
+input:not([type="submit"]){
+    width:50%;
+    margin-top: 3px;
+    display:inline-block;
+    font-size: 100%;           
+    background: none;
+    border: 0;
+    border-bottom:1px solid white;
+    padding-right:30px;
+}
+
+.button{
+    font-family: 'Open Sans', sans-serif; 
+    width:30%;
+    margin-top: 3px;
+    font-weight: bold;   
+    display:inline-block;
+    font-size: 100%;           
+    border: 0;
+    border-bottom:1px solid white;
+    padding-right:30px;
+    margin-left: 31%;   
+}
+
+.indicates-required{
+    text-align: right;
+    margin-top: .5em;
+}
+
+
+
 
 /******************************************
 /* SLIDER
 /*******************************************/
 
-/*this is the arrow navigation*/
-.slides {
-    padding: 0;
-    width: 900px; /*need to make bigger*/
-    height: 700px; /*need to make bigger*/
-    display: block;
-    margin: 0 auto;
-    position: relative;
+/*how do I set this in a frame and keep it there?*/
+
+.shootsgallery{
+    max-width: 900px;
+    height: auto;
+
 }
-
-/*what does this mean? Is this resetting something?*/
-.slides * {
-    user-select: none;
-    -ms-user-select: none;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;
-}
-
-.slides input { 
-    display: none; 
-}
-
-.slide-container { 
-    display: block; 
-}
-
-/*this is the images*/
-.slide {
-    top: 0;
-    opacity: 0;
-    width: 900px;
-    height: 700px;
-    display: block;
-    position: absolute;
-
-    transform: scale(0);
-
-    transition: all .7s ease-in-out;
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-}
-
-.nav label {
-    width: 200px;
-    height: 100%;
-    display: none;
-    position: absolute;
-
-      opacity: 0;
-    z-index: 9;
-    cursor: pointer;
-
-    transition: opacity .2s;
-
-    color: #FFF;
-    font-size: 156pt;
-    text-align: center;
-    line-height: 650px; /*height of the arrow*/
-    font-family: "Varela Round", sans-serif;
-    background-color: rgba(255, 255, 255, .3);
-    text-shadow: 0px 0px 15px rgb(119, 119, 119);
-}
-
-.slide:hover + .nav label { 
-    opacity: 0.5; 
-}
-
-.nav label:hover { 
-    opacity: 1; 
-}
-
-.nav .next { right: 0; }
-
-input:checked + .slide-container  .slide {
-    opacity: 1;
-
-    transform: scale(1);
-
-    transition: opacity 1s ease-in-out;
-}
-
-input:checked + .slide-container .nav label { display: block; }
-
-
-/*navigation dots*/
-.nav-dots {
-    width: 100%;
-    bottom: 9px;
-    height: 20px; /*height of the dots*/
-    display: block;
-    position: absolute;
-    text-align: center;
-}
-
-.nav-dots .nav-dot {
-    top: -5px;
-    width: 11px;
-    height: 11px;
-    margin: 0 4px;
-    position: relative;
-    border-radius: 100%;
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-.nav-dots .nav-dot:hover {
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/*This ~ sign does work in older browsers. This is what makes the dots link I think.*/
-
-input#img-1:checked ~ .nav-dots label#img-dot-1,
-input#img-2:checked ~ .nav-dots label#img-dot-2,
-input#img-3:checked ~ .nav-dots label#img-dot-3,
-input#img-4:checked ~ .nav-dots label#img-dot-4,
-input#img-5:checked ~ .nav-dots label#img-dot-5,
-input#img-6:checked ~ .nav-dots label#img-dot-6 {
-    background: rgba(0, 0, 0, 0.8);
-}
+/*
+.shootsgallery img{
+    max-width: 900px;
+    max-height: 600px;    
+}*/
 
 
 /******************************************
@@ -341,6 +305,24 @@ input#img-6:checked ~ .nav-dots label#img-dot-6 {
         padding-left: 1em;
     }
 
+    /*LAYOUT*/
+    .about_content{
+    text-align: center;
+    display: inline-block;
+    color: blue;
+    }
+
+    input:not([type="submit"]){
+    width:65%;
+    margin-top: 3px;
+    display:inline-block;
+    font-size: 100%;           
+    background: none;
+    border: 0;
+    border-bottom:1px solid white;
+    padding-right:30px;
+}
+
     /* Mobile Nav*/
     .mobile-nav{
         display: block;
@@ -374,16 +356,15 @@ input#img-6:checked ~ .nav-dots label#img-dot-6 {
         left: 0px;
     }
 
+
     /* STATE */
     a:active,
     .main-nav a:active{color: white;}
     .main-nav a:active {background:rgba(255,255,255,0.2);}
 
-    .page h2 a:active,
-    .readlink:active,
-    .sidebar a:active{color: #121212;}    /* almost black */
 
-    .blue:active{color: #f9e42e;}         /* yellow */
+    
+
 }
 
 /* Tablet/Desktop -----------------------*/
@@ -412,6 +393,7 @@ input#img-6:checked ~ .nav-dots label#img-dot-6 {
     /* STATE */
     a:hover,
     .main-nav a:hover{color: white;}
+
 
    
 }
