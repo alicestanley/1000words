@@ -12,7 +12,11 @@ $(document).ready(function(){
 $(document).ready(function(){
   $('.shootsgallery').slick({
   	// setting-name: setting-value
+<<<<<<< HEAD
   	// adaptiveHeight: false
+=======
+	// variableWidth: true  	
+>>>>>>> gh-pages
 
 });
 });
@@ -32,6 +36,7 @@ $(document).ready(function(){
 });
 	
 
+<<<<<<< HEAD
 // image slider
 
 // var images=["images/events/_D3S0956.jpg","images/Events/_D3S0984.jpg","images/Events/_DSC0969.jpg","images/Events/_DSC1048.jpg","images/Events/_DSC2531.jpg","images/Events/_DSC2947.jpg","images/Events/_DSC6620.jpg", "images/Events/_DSC6620.jpg", "images/Events/_DSC6780.jpg","images/Events/_DSC9264.jpg"];
@@ -91,3 +96,5 @@ $(document).ready(function(){
 //        nextArrow: '<a>Next</a>'
 //    });
 // });
+=======
+>>>>>>> gh-pages

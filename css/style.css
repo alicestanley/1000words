@@ -14,12 +14,7 @@ Developer @GA Melbourne
 html {box-sizing: border-box;}
 *, *:before, *:after {box-sizing: inherit;}
 
-/* Clear fix hack */
-.group:after{
-    display: block;
-    content: " ";
-    clear: both;
-}
+
 
 /******************************************
 /* BASE STYLES
@@ -48,6 +43,7 @@ a {
 img {
     max-width: 100%;
     height: auto;
+    margin: auto;
 
 }
 
@@ -62,6 +58,7 @@ img {
     margin-bottom: 50px;
 }
 
+<<<<<<< HEAD
 .about_image{
     float: left;
     margin-right: 1em;
@@ -73,7 +70,25 @@ img {
     display: inline-block;
     width: 56%;
 
+=======
+.container:after {
+  content: "";
+  display: block;
+  clear: both;
+>>>>>>> gh-pages
 }
+
+.about_image{
+    float: left;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    display: inline-block;
+
+}
+
+
+
+ 
 
 /*might need this*/
 .visually-hidden {
@@ -100,11 +115,12 @@ header {
 }
 
 /*footer styling for everypage*/
-
+/*????????????????????????????????*/
+/*question should be a better way to stop iamge overlap?*/
 footer {
-    
     background: #575658;       
     padding: 1.5em 0;
+
 }
 
 footer ul {
@@ -147,16 +163,23 @@ h2{
     font-family: 'Pacifico', cursive;
     color: #D4D3CD;
     display: block;
-    margin: 1em 0em;
+    margin: 0;
     font-size: 1.5em;
     text-align: right;
 }
 
 h3{
+<<<<<<< HEAD
     font-family: 'Pacifico', cursive;
     color: #D4D3CD;
     display: block;
     margin: 1em 0em;
+=======
+    font-family: 'Open Sans', sans-serif;
+    color: #D4D3CD;
+    display: block;
+    margin: 0;
+>>>>>>> gh-pages
     font-size: 1.5em;
     text-align: left;
 }
@@ -169,7 +192,18 @@ h3 a{
     margin: 1em;
 }
 
+<<<<<<< HEAD
 
+=======
+p{
+    font-family: 'Open Sans', sans-serif;
+    color: #D4D3CD;
+    display: block;
+    margin: 0;
+    font-size: 1em;
+    text-align: left;   
+}
+>>>>>>> gh-pages
 
 .main-nav a,
  {
@@ -189,14 +223,63 @@ footer p {
 
  }
 
-.about img{
-    margin: 0.5em;
-}
+
 
 /******************************************
 /* MAILCHIMP
 /*******************************************/
 
+<<<<<<< HEAD
+=======
+/*Register page*/
+.mc-field-group{
+  margin: 0 auto;
+  max-width: 960px;
+    padding:12px; 
+    position:relative;
+}
+
+label{
+    text-align: left;
+/*    margin-right: 15px;*/
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+
+}
+
+
+input:not([type="submit"]){
+    width:50%;
+    margin-top: 3px;
+    display:inline-block;
+    font-size: 100%;           
+    background: none;
+    border: 0;
+    border-bottom:1px solid white;
+    padding-right:30px;
+}
+
+.button{
+    font-family: 'Open Sans', sans-serif; 
+    width:30%;
+    margin-top: 3px;
+    font-weight: bold;   
+    display:inline-block;
+    font-size: 100%;           
+    border: 0;
+    border-bottom:1px solid white;
+    padding-right:30px;
+    margin-left: 31%;   
+}
+
+.indicates-required{
+    text-align: right;
+    margin-top: .5em;
+}
+
+
+>>>>>>> gh-pages
 
 
 /******************************************
@@ -206,10 +289,20 @@ footer p {
 /*how do I set this in a frame and keep it there?*/
 
 .shootsgallery{
+<<<<<<< HEAD
     width:900px;
     height:auto;
+=======
+    max-width: 900px;
+    height: auto;
+>>>>>>> gh-pages
 
 }
+/*
+.shootsgallery img{
+    max-width: 900px;
+    max-height: 600px;    
+}*/
 
 
 /******************************************
@@ -245,6 +338,24 @@ footer p {
         padding-left: 1em;
     }
 
+    /*LAYOUT*/
+    .about_content{
+    text-align: center;
+    display: inline-block;
+    color: blue;
+    }
+
+    input:not([type="submit"]){
+    width:65%;
+    margin-top: 3px;
+    display:inline-block;
+    font-size: 100%;           
+    background: none;
+    border: 0;
+    border-bottom:1px solid white;
+    padding-right:30px;
+}
+
     /* Mobile Nav*/
     .mobile-nav{
         display: block;
@@ -278,16 +389,15 @@ footer p {
         left: 0px;
     }
 
+
     /* STATE */
     a:active,
     .main-nav a:active{color: white;}
     .main-nav a:active {background:rgba(255,255,255,0.2);}
 
-    .page h2 a:active,
-    .readlink:active,
-    .sidebar a:active{color: #121212;}    /* almost black */
 
-    .blue:active{color: #f9e42e;}         /* yellow */
+    
+
 }
 
 /* Tablet/Desktop -----------------------*/
@@ -316,6 +426,7 @@ footer p {
     /* STATE */
     a:hover,
     .main-nav a:hover{color: white;}
+
 
    
 }
