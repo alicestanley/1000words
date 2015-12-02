@@ -55,27 +55,13 @@ img {
 .container {
     margin: 0 auto;
     max-width: 960px;
-    margin-bottom: 50px;
+
 }
 
-<<<<<<< HEAD
-.about_image{
-    float: left;
-    margin-right: 1em;
-    margin-bottom: 1em;
-}
-
-.about_content{
-    text-align: justify;
-    display: inline-block;
-    width: 56%;
-
-=======
 .container:after {
   content: "";
   display: block;
   clear: both;
->>>>>>> gh-pages
 }
 
 .about_image{
@@ -83,40 +69,26 @@ img {
     margin-right: 1em;
     margin-bottom: 1em;
     display: inline-block;
-
 }
 
-
-
+.shoots-heading{
+    margin-left: 1.5em;
+    margin-bottom: 0.5em;
+}
  
-
-/*might need this*/
-.visually-hidden {
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    clip: rect(1px 1px 1px 1px);
-}
-
 .hidden{display: none;}
-.main-content {margin: 2.5em auto 1.25em;}  /* 40px 20px */
 
-/*setting the header style at the top of every page*/
+
+/*setting the header and footer styles at the top of every page*/
 header {
-    padding: 1.5em 0;            
+    padding: 1.5em;            
     overflow: hidden;
-    background: black;        /* grey #575658 */
-
+    background: black;        
 }
 
 .logo{
         display: inline-block;
 }
-
-/*footer styling for everypage*/
-/*????????????????????????????????*/
-/*question should be a better way to stop iamge overlap?*/
 footer {
     background: #575658;       
     padding: 1.5em 0;
@@ -142,6 +114,7 @@ footer p {
     display: inline-block;
     margin-top: 3em;
     float: right;
+    padding: .5em;
 }
 
 /******************************************
@@ -166,20 +139,14 @@ h2{
     margin: 0;
     font-size: 1.5em;
     text-align: right;
+    padding: 1em;
 }
 
 h3{
-<<<<<<< HEAD
-    font-family: 'Pacifico', cursive;
-    color: #D4D3CD;
-    display: block;
-    margin: 1em 0em;
-=======
     font-family: 'Open Sans', sans-serif;
     color: #D4D3CD;
     display: block;
     margin: 0;
->>>>>>> gh-pages
     font-size: 1.5em;
     text-align: left;
 }
@@ -192,18 +159,15 @@ h3 a{
     margin: 1em;
 }
 
-<<<<<<< HEAD
-
-=======
 p{
     font-family: 'Open Sans', sans-serif;
     color: #D4D3CD;
     display: block;
     margin: 0;
     font-size: 1em;
-    text-align: left;   
+    text-align: left; 
+    
 }
->>>>>>> gh-pages
 
 .main-nav a,
  {
@@ -229,8 +193,6 @@ footer p {
 /* MAILCHIMP
 /*******************************************/
 
-<<<<<<< HEAD
-=======
 /*Register page*/
 .mc-field-group{
   margin: 0 auto;
@@ -261,49 +223,39 @@ input:not([type="submit"]){
 }
 
 .button{
-    font-family: 'Open Sans', sans-serif; 
+    font-family: 'Pacifico', cursive; 
     width:30%;
-    margin-top: 3px;
+    margin: 1em;
+    float: left;
     font-weight: bold;   
     display:inline-block;
     font-size: 100%;           
     border: 0;
-    border-bottom:1px solid white;
-    padding-right:30px;
-    margin-left: 31%;   
+    margin-left: 31%;  
+    border-radius: 5px; 
+    background-color: #D4D3CD;
 }
 
 .indicates-required{
     text-align: right;
     margin-top: .5em;
+    font-size: .75em;
+    padding-right: 2em;
 }
 
 
->>>>>>> gh-pages
 
 
 /******************************************
 /* SLIDER
 /*******************************************/
 
-/*how do I set this in a frame and keep it there?*/
-
 .shootsgallery{
-<<<<<<< HEAD
-    width:900px;
-    height:auto;
-=======
     max-width: 900px;
     height: auto;
->>>>>>> gh-pages
+    margin: 0 auto;
 
 }
-/*
-.shootsgallery img{
-    max-width: 900px;
-    max-height: 600px;    
-}*/
-
 
 /******************************************
 /* MODULES
