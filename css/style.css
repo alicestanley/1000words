@@ -55,7 +55,7 @@ img {
 .container {
     margin: 0 auto;
     max-width: 960px;
-    margin-bottom: 50px;
+
 }
 
 .container:after {
@@ -69,40 +69,26 @@ img {
     margin-right: 1em;
     margin-bottom: 1em;
     display: inline-block;
-
 }
 
-
-
+.shoots-heading{
+    margin-left: 1.5em;
+    margin-bottom: 0.5em;
+}
  
-
-/*might need this*/
-.visually-hidden {
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    clip: rect(1px 1px 1px 1px);
-}
-
 .hidden{display: none;}
-.main-content {margin: 2.5em auto 1.25em;}  /* 40px 20px */
 
-/*setting the header style at the top of every page*/
+
+/*setting the header and footer styles at the top of every page*/
 header {
-    padding: 1.5em 0;            
+    padding: 1.5em;            
     overflow: hidden;
-    background: black;        /* grey #575658 */
-
+    background: black;        
 }
 
 .logo{
         display: inline-block;
 }
-
-/*footer styling for everypage*/
-/*????????????????????????????????*/
-/*question should be a better way to stop iamge overlap?*/
 footer {
     background: #575658;       
     padding: 1.5em 0;
@@ -128,6 +114,7 @@ footer p {
     display: inline-block;
     margin-top: 3em;
     float: right;
+    padding: .5em;
 }
 
 /******************************************
@@ -152,6 +139,7 @@ h2{
     margin: 0;
     font-size: 1.5em;
     text-align: right;
+    padding: 1em;
 }
 
 h3{
@@ -177,7 +165,8 @@ p{
     display: block;
     margin: 0;
     font-size: 1em;
-    text-align: left;   
+    text-align: left; 
+    
 }
 
 .main-nav a,
@@ -234,21 +223,24 @@ input:not([type="submit"]){
 }
 
 .button{
-    font-family: 'Open Sans', sans-serif; 
+    font-family: 'Pacifico', cursive; 
     width:30%;
-    margin-top: 3px;
+    margin: 1em;
+    float: left;
     font-weight: bold;   
     display:inline-block;
     font-size: 100%;           
     border: 0;
-    border-bottom:1px solid white;
-    padding-right:30px;
-    margin-left: 31%;   
+    margin-left: 31%;  
+    border-radius: 5px; 
+    background-color: #D4D3CD;
 }
 
 .indicates-required{
     text-align: right;
     margin-top: .5em;
+    font-size: .75em;
+    padding-right: 2em;
 }
 
 
@@ -258,19 +250,12 @@ input:not([type="submit"]){
 /* SLIDER
 /*******************************************/
 
-/*how do I set this in a frame and keep it there?*/
-
 .shootsgallery{
     max-width: 900px;
     height: auto;
+    margin: 0 auto;
 
 }
-/*
-.shootsgallery img{
-    max-width: 900px;
-    max-height: 600px;    
-}*/
-
 
 /******************************************
 /* MODULES
