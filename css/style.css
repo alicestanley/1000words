@@ -38,6 +38,12 @@ a {
     text-decoration: none;
 }
 
+.shoots-heading a{
+    color: white;
+    font-size: 1em;
+    text-decoration: none;
+}
+
 /* styles for images*/
 
 img {
@@ -46,6 +52,8 @@ img {
     margin: auto;
 
 }
+
+
 
 /******************************************
 /* LAYOUT
@@ -78,6 +86,26 @@ img {
  
 .hidden{display: none;}
 
+.calltoaction{
+    margin-left: 1.5em;
+    margin-bottom: 0.5em;
+
+}
+
+.calltoaction .join_button{
+    font-family: 'Pacifico', cursive; 
+    width:30%;
+    margin: 1em;
+    float: left;
+    font-weight: bold;   
+    font-size: 100%;           
+    border: 0;
+    margin-left: 31%;  
+    border-radius: 5px; 
+    background-color: #D4D3CD;
+    color: black;
+    text-align: center;
+}
 
 /*setting the header and footer styles at the top of every page*/
 header {
@@ -165,8 +193,7 @@ p{
     display: block;
     margin: 0;
     font-size: 1em;
-    text-align: left; 
-    
+    text-align: left;    
 }
 
 .main-nav a,
@@ -242,6 +269,7 @@ input:not([type="submit"]){
     font-size: .75em;
     padding-right: 2em;
 }
+
 
 
 
