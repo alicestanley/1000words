@@ -247,6 +247,7 @@ input:not([type="submit"]){
     border: 0;
     border-bottom:1px solid white;
     padding-right:30px;
+    color: white;
 }
 
 .button{
@@ -299,7 +300,12 @@ input:not([type="submit"]){
 /* Phones -----------------------*/
 @media screen and (max-width:767px) {
     .page header{padding-bottom:.5em;}
+    h1{
 
+      font-size: 2em;
+
+
+    }           
     .main-nav{
         overflow:hidden;
         clear:both;
